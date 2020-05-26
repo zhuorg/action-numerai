@@ -1,13 +1,11 @@
 name: submit predictions
 on:
-  push:
-    branches: [ master ]
   schedule:
     - cron:  '*/15 * * * *'
 
 jobs:
   submit_predictions:
-    if: github.event_name == 'push'
+    if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     steps:
 
