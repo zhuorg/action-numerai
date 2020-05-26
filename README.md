@@ -1,2 +1,2 @@
 # action-numerai
-Submit predictions to numerai using github actions
+Submit predictions to numerai using github actions.
