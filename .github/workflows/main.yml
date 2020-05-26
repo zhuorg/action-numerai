@@ -6,7 +6,7 @@ on:
     - cron:  '*/15 * * * *'
 
 jobs:
-  get_new_games:
+  submit_predictions:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
