@@ -7,7 +7,7 @@ tournaments = nx.tournament_names()
 print(tournaments)
 
 # download dataset from numerai
-data = nx.download('numerai_dataset.zip', single_precision=True)
+data = nx.download('numerai_dataset.zip')
 
 for tournament_name in tournaments:
     # create your model
