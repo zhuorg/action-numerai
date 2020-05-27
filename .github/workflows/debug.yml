@@ -1,6 +1,6 @@
 name: debug
 on:
-  push:
+  repository_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
