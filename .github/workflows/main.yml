@@ -34,8 +34,15 @@ jobs:
     - name: train model
       id: train_model
       run: |
-        df -H
-        python3 ./train.py
+
+        import numerox as nx
+        import numerapi
+        import os
+        import model
+        tournaments = nx.tournament_names()
+        print(tournaments)
+        data = nx.download('numerai_dataset.zip')
+      shell: python
 
     - name: submit predictions
       run: |
