@@ -5,10 +5,16 @@ import model
 
 tournaments = nx.tournament_names()
 print(tournaments)
-
-# download dataset from numerai
-data = nx.download('numerai_dataset.zip')
-
+try
+  # download dataset from numerai
+  data = nx.download('numerai_dataset.zip')
+except OSError as err:
+    print("OS error: {0}".format(err))
+except ValueError:
+    print("Could not convert data to an integer.")
+except:
+    print("Unexpected error:", sys.exc_info()[0])
+    raise
 for tournament_name in tournaments:
     # create your model
     m = model.LinearModel(verbose=True)
