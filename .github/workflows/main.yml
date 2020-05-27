@@ -1,7 +1,6 @@
 name: submit predictions
 on:
-  schedule:
-    - cron:  '*/15 * * * *'
+  push:
 
 jobs:
   submit_predictions:
