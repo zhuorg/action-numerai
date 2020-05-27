@@ -5,7 +5,7 @@ import model
 
 tournaments = nx.tournament_names()
 print(tournaments)
-try
+try: 
   # download dataset from numerai
   data = nx.download('numerai_dataset.zip')
 except OSError as err:
