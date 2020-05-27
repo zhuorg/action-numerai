@@ -5,3 +5,5 @@ import model
 
 tournaments = nx.tournament_names()
 print(tournaments)
+
+data = nx.download('numerai_dataset.zip')
